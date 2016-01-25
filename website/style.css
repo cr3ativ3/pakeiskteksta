@@ -1,0 +1,10 @@
+#images label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#images label img {
+    padding: 3px;
+	width: 100px;
+	height: 100px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Pakeisk Varda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="static/app-theme.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300italic,100,100italic,300" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="static/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+	<h1>Pakeisti vardą dar niekad nebuvo taip paprasta!</h1>
+	<h3>Susikurk kokį nori vardą ant kvailo paveikslėlio, net jei niekam tai nerūpi!</h3>
+	<h2>1. Išlinksniuok kvailą vardą</h2>
+	
+	<label for="name-kas">Kas: </label>
+	<input type="text" id="name-kas" size="12" value="Vardenis" /><p>
+	
+	<label for="name-ko">Ko: </label>
+	<input type="text" id="name-ko" size="12" value="Vardenio" /><p>
+	
+	<label for="name-kam">Kam: </label>
+	<input type="text" id="name-kam" size="12" value="Vardeniui" /><p>
+	
+	<label for="name-ka">Ką: </label>
+	<input type="text" id="name-ka" size="12" value="Vardenį" /><p>
+	
+	<label for="name-kuo">Kuo: </label>
+	<input type="text" id="name-kuo" size="12" value="Vardeniu" /><p>
+	
+	<h2>2. Spausk ant paveiksliuko</h2>
+	<div id="images">
+		<input type="radio" name="photo" id="showcase" font="30px Arial bold" textColor="black" n-ko1="80,220" n-kas1="480,220" n-kuo1="320,260" n-ka1="490,300" n-kam1="290,340" onclick="generateImage(this);"/>
+		<label for="showcase"><img src="img/showcase.jpg" /></label>
+		<input type="radio" name="photo" id="vardui_px" font="bold 16px Tahoma" textColor="black" n-kas1="140,120" n-kam1="340,120" onclick="generateImage(this);"/>
+		<label for="vardui_px"><img src="img/vardui_px.jpg" /></label>
+		<input type="radio" name="photo" id="nepatinka_vardas" font="bold 20px Comic Sans MS" textColor="white" n-kas1="178,133" onclick="generateImage(this);"/>
+		<label for="nepatinka_vardas"><img src="img/nepatinka_vardas.jpg" /></label>
+	</div>
+	<p>
+	<h2>3. Džiaukis niekam neidomiu rezultatu</h2>
+	<p>(gali net <a id="result_download" download="durnas_paveiksliukas.jpg" href="#" >atsisiust</a>)</p>
+	<img id="result" src="img/empty.jpg" />
+	<div>
+		<p>Pafotoshopink Mane, Group.</p>
+	</div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="processor.js"></script>
+  </body>
+</html>
