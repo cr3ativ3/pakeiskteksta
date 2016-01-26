@@ -25,19 +25,19 @@ function generateImage(imgVar){
 		if (attrib.specified && attrib.name.substring(0,2) == "n-") {
 			var textValue = '';
 			if (attrib.name.substring(2, attrib.name.length-1) == "kas"){
-				textValue = nameKas.value
+				textValue = nameKas.value.trim() == '' ? "Text1" : nameKas.value;
 			}
 			if (attrib.name.substring(2, attrib.name.length-1) == "ko"){
-				textValue = nameKo.value
+				textValue = nameKo.value.trim() == '' ? "Text2" : nameKo.value;
 			}
 			if (attrib.name.substring(2, attrib.name.length-1) == "kam"){
-				textValue = nameKam.value
+				textValue = nameKam.value.trim() == '' ? "Text3" : nameKam.value;
 			}
 			if (attrib.name.substring(2, attrib.name.length-1) == "ka"){
-				textValue = nameKa.value
+				textValue = nameKa.value.trim() == '' ? "Text4" : nameKa.value;
 			}
 			if (attrib.name.substring(2, attrib.name.length-1) == "kuo"){
-				textValue = nameKuo.value
+				textValue = nameKuo.value.trim() == '' ? "Text5" : nameKuo.value
 			}
 			context.fillText(textValue, attrib.value.split(',')[0], attrib.value.split(',')[1])
 		}
